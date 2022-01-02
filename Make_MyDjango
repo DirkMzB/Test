@@ -1,0 +1,145 @@
+## Einrichtung conda-Enviroment
+
+which python3
+    /usr/local/bin/python3
+python3 -V
+    Python 3.9.9
+
+python3 -m pip install --upgrade pip
+    Requirement already satisfied: pip in /Users/MzB/Library/Python/3.9/lib/python/site-packages (21.3.1
+pip3 install virtualenv
+    Requirement already satisfied: virtualenv in /Users/MzB/Library/Python/3.9/lib/python/site-packages (20.10.0)
+pip3 install --upgrade setuptools
+    Successfully installed setuptools-60.2.0
+
+pwd
+    /Users/MzB/Desktop/SOFTWARE/Django virtualenv -p python3 Django
+cd /Users/MzB/Desktop/SOFTWARE/Django/Django
+
+## (Django)
+## source Django/bin/activate      => deactivate
+which python3
+    /Users/MzB/Desktop/SOFTWARE/Django/Django/bin/python3
+python3 -V
+    Python 3.9.9
+python3 -m pip install --upgrade pip
+pip3 install Django
+    Successfully installed Django-4.0
+
+python3
+>>> import django
+>>> django.get_version()
+'4.0'
+>>> exit()
+
+django-admin startproject mysite
+cd mysite
+python3 manage.py migrate
+python3 manage.py runserver &
+
+https://tutorial.djangogirls.org/de/django_start_project/
+
+
+#  Djamgp-Girls-Tutorial (https://tutorial.djangogirls.org)
+
+# Django-Models
+## Eine Applikation für unseren Blog
+python3 manage.py startapp blog
+python3 manage.py makemigrations blog
+python3 manage.py migrate blog
+
+python3 manage.py createsuperuser
+    mzb
+    dirk.mzb@googlemail.com
+    Sn00p999
+    Sn00p999
+
+## Veröffentlichen! (https://tutorial.djangogirls.org/de/deploy/)
+
+# Git installieren
+https://git-scm.com/
+https://git-scm.com/download/mac
+brew install git
+brew install git-gui
+cd /Users/MzB/Desktop/SOFTWARE/Django/mysite
+git init
+git config --global user.name "DirkMzB"
+git config --global user.email dirk.mzb@googlemail.com
+vi .gitignore
+git status
+git add .
+git commit -m "Meine Django-Girls-App, erster Commit"
+
+git remote add origin https://github.com/DirkMzB/my-first-blog.git
+git push -u origin master       !!! funktioniert nicht bei mir!!!   User:   d.mzb@gmx.de    /   Sn00p999
+
+https://github.com/settings/tokens
+New personal access token
+DirkMzB
+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
+
+https://reactgo.com/github-password-authentication-removed/
+git remote add origin https://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@github.com/DirkMzB/my-first-blog.git
+
+https://www.delftstack.com/de/howto/git/how-to-remove-a-git-remote-url/
+
+## Deinen Blog auf PythonAnywhere einrichten
+
+https://www.pythonanywhere.com
+    mzb
+    dirk.mzb@googlemail.com
+    Sn00p999
+    Sn00p999
+
+https://www.pythonanywhere.com
+Your API token
+    f7e5cc656246748bf893a0b653977630a7ff7dff
+
+    import requests
+    username = 'mzb'
+    token = 'f7e5cc656246748bf893a0b653977630a7ff7dff'
+
+    response = requests.get(
+        'https://www.pythonanywhere.com/api/v0/user/{username}/cpu/'.format(
+            username=username
+        ),
+        headers={'Authorization': 'Token {token}'.format(token=token)}
+    )
+    if response.status_code == 200:
+        print('CPU quota info:')
+        print(response.content)
+    else:
+        print('Got unexpected status code {}: {!r}'.format(response.status_code, response.content))
+             
+
+## auf pythonanywhere - bash-Konsole
+pip3.8 install pythonanywhere
+
+pa_autoconfigure_django.py https://github.com/DirkMzB/my-first-blog
+
+
+
+
+
+
+
+
+
+
+
+(myvenv) MacBookPro-12-1:djangogirls MzB$ git init
+Hinweis: Als Name für den initialen Branch wurde 'master' benutzt. Dieser
+Hinweis: Standard-Branchname kann sich ändern. Um den Namen des initialen Branches
+Hinweis: zu konfigurieren, der in allen neuen Repositories verwendet werden soll und
+Hinweis: um diese Warnung zu unterdrücken, führen Sie aus:
+Hinweis: 
+Hinweis: 	git config --global init.defaultBranch <Name>
+Hinweis: 
+Hinweis: Häufig gewählte Namen statt 'master' sind 'main', 'trunk' und
+Hinweis: 'development'. Der gerade erstellte Branch kann mit diesem Befehl
+Hinweis: umbenannt werden:
+Hinweis: 
+Hinweis: 	git branch -m <Name>
+
+
+ vscode://vscode.github-authentication/did-authenticate?windowid=5&code=f9d04005f1081e9bbb27&state=11c22abf-9483-490f-8689-a067231a0602 
