@@ -70,6 +70,9 @@ git status
 git add .
 git commit -m "Meine Django-Girls-App, erster Commit"
 
+user.name=DirkMzB
+user.email=d.mzb@gmx.de
+
 git remote add origin https://github.com/DirkMzB/my-first-blog.git
 git push -u origin master       !!! funktioniert nicht bei mir!!!   User:   d.mzb@gmx.de    /   Sn00p999
 
